@@ -14,9 +14,13 @@ def create_app():
         weather_data = None
         forecast_data = None
         if request.method == "POST":
-            city = request.form["city"]
-            weather_data = get_weather(city)
-            forecast_data = get_forecast(city)
+            city = request.form.get("city")
+            print(f"City received: {city}")  # Debug print
+            if city:
+                weather_data = get_weather(city)
+                print(f"Weather data: {weather_data}")  # Debug print
+                forecast_data = get_forecast(city)
+                print(f"Forecast data: {forecast_data}")  # Debug print
         return render_template("index.html", weather=weather_data, forecast=forecast_data)
 
     def get_weather(city):
@@ -24,6 +28,7 @@ def create_app():
         response = requests.get(BASE_URL, params=params)
         if response.status_code == 200:
             return response.json()
+        print(f"Weather API error: {response.status_code}")  # Debug print
         return None
 
     def get_forecast(city):
@@ -31,6 +36,7 @@ def create_app():
         response = requests.get(FORECAST_URL, params=params)
         if response.status_code == 200:
             return response.json()
+        print(f"Forecast API error: {response.status_code}")  # Debug print
         return None
 
     return app

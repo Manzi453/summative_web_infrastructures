@@ -5,7 +5,7 @@ def create_app():
     app = Flask(__name__)
 
     # Replace with your OpenWeatherMap API key
-    API_KEY = "your_openweathermap_api_key"
+    API_KEY = "9dfc06c1de34c33ab1b97f5fbb56813a"
     BASE_URL = "http://api.openweathermap.org/data/2.5/weather"
     FORECAST_URL = "http://api.openweathermap.org/data/2.5/forecast"
 

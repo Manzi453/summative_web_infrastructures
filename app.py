@@ -5,7 +5,7 @@ def create_app():
     app = Flask(__name__)
 
     # Replace with your OpenWeatherMap API key
-    API_KEY = "9dfc06c1de34c33ab1b97f5fbb56813a"
+    API_KEY = "fc46e87c6a8c5fa03b2af707b07319c8"
     BASE_URL = "http://api.openweathermap.org/data/2.5/weather"
     FORECAST_URL = "http://api.openweathermap.org/data/2.5/forecast"
 
@@ -25,18 +25,22 @@ def create_app():
 
     def get_weather(city):
         params = {"q": city, "appid": API_KEY, "units": "metric"}
+        print(f"Fetching weather data for: {city}")  # Debug print
+        print(f"API URL: {BASE_URL}?q={city}&appid={API_KEY}&units=metric")  # Debug print
         response = requests.get(BASE_URL, params=params)
         if response.status_code == 200:
             return response.json()
-        print(f"Weather API error: {response.status_code}")  # Debug print
+        print(f"Weather API error: {response.status_code} - {response.text}")  # Debug print
         return None
 
     def get_forecast(city):
         params = {"q": city, "appid": API_KEY, "units": "metric"}
+        print(f"Fetching forecast data for: {city}")  # Debug print
+        print(f"API URL: {FORECAST_URL}?q={city}&appid={API_KEY}&units=metric")  # Debug print
         response = requests.get(FORECAST_URL, params=params)
         if response.status_code == 200:
             return response.json()
-        print(f"Forecast API error: {response.status_code}")  # Debug print
+        print(f"Forecast API error: {response.status_code} - {response.text}")  # Debug print
         return None
 
     return app

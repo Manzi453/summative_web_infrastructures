@@ -1,0 +1,76 @@
+/* Light Theme (Default) */
+.light-theme {
+    --bg-color: #ffffff;
+    --text-color: #121212;
+    --input-bg: #f0f0f0;
+    --button-bg: #6200ee;
+    --button-hover: #3700b3;
+    --result-bg: #f8f8f8;
+}
+
+/* Dark Theme */
+.dark-theme {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --input-bg: #1e1e1e;
+    --button-bg: #bb86fc;
+    --button-hover: #3700b3;
+    --result-bg: #1e1e1e;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+button, input {
+    padding: 10px 15px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button {
+    background-color: var(--button-bg);
+    color: white;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+input {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border: 1px solid #ccc;
+}
+
+#result {
+    background-color: var(--result-bg);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.country-flag {
+    max-width: 100px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+#theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 12px;
+    background-color: var(--button-bg);
+}

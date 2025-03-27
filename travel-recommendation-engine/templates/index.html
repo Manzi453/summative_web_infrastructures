@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Travel Guide</title>
+    <link rel="stylesheet" href="/static/css/style.css" id="theme-style">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="light-theme">
+    <button id="theme-toggle">🌙 Dark Mode</button>
+    <h1>🌍 Global Travel Guide</h1>
+    
+    <div class="search-container">
+        <input type="text" id="country-input" placeholder="Enter country name">
+        <button onclick="fetchCountry()">Search</button>
+    </div>
+    
+    <button onclick="fetchRandomCountry()">Random Country</button>
+    
+    <div id="result"></div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

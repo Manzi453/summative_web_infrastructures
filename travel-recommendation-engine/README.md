@@ -20,6 +20,6 @@ A command-line application that provides travel recommendations with cultural in
 1. Clone this repository
 2. Install Python 3 if not already installed
 3. Install dependencies:
-
-```bash
-pip install -r requirements.txt
+ 
+Link to the demo video
+https://www.youtube.com/watch?v=RRgFQ0YVbIY

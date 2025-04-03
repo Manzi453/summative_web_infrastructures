@@ -23,5 +23,7 @@ A command-line application that provides travel recommendations with cultural in
  
 Link to the demo video
 https://www.youtube.com/watch?v=RRgFQ0YVbIY
+
+
 link for the domain to access the website
 https://www.manzi453.tech/
